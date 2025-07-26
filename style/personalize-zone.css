@@ -1,0 +1,21 @@
+.personalized-zone{
+    max-width: 1402px;
+    margin: 0 auto;
+}
+.personalized-zone-wrapper{
+    margin-top: 48px;
+    margin-bottom: 18px;
+}
+.personalized-zone-outer{
+    
+    padding:6px;
+    margin-bottom: 6px;
+}
+.personalized-zone-outer h2{
+    letter-spacing: 0.46514px;
+    font-size: 31.01px;
+    font-weight: 300;
+    line-height: 1.1;
+    text-align: center;
+    font-family: Guardian-EgypTT,Charter,Charter Bitstream,Cambria,Noto Serif Light,Droid Serif,Georgia,"serif";
+}
