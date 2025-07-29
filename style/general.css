@@ -8,3 +8,9 @@ a{
     text-decoration: none;
     color:#222
 }
+svg{
+    display: block;
+}
+li{
+    list-style: none;
+}

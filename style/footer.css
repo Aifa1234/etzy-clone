@@ -1,0 +1,327 @@
+.footer-common,
+.footer-wrapper,
+.footer-up,
+.footer-up-outer,
+.footer-subscribe,
+.footer-up-header,
+.footer-middle,
+.footer-down-right-wrapper,
+.footer-down-right-grid,
+.footer-down-right-column,
+.footer-right-list-item ul li,
+.icon-container,
+.icon-wrapper,
+.icon-wrapper ul,
+.footer-down-left,
+.etsy-large-icon-link,
+.footer-left-icon{
+  line-height: 1.4;
+  font-size: 14px;
+}
+.footer-wrapper{
+  background: #2638c0;
+  margin-left: auto;
+  margin-right: auto; 
+  color: #222;
+}
+footer{
+    display: block;
+}
+.footer-up{
+  padding-bottom: 18px;
+  background: #ccebff;
+  color:#222  
+}
+.footer-up-outer{
+    text-align: center;
+    padding-top: 36px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.footer-up-header{
+    margin-bottom: 18px;
+}
+.footer-up-header-wrapper{
+    letter-spacing: 0.08px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    color:#222
+}
+.subscribe-bar{
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.4;
+    font-size: 14px;
+}
+.subscribe-wrapper{
+    border-radius: 999999px;
+    background: #fff;
+    display: flex;
+    position: relative;
+    box-shadow:inset 1px 2px 4px #0e0e0e17;
+    line-height: 1.4;
+    font-size: 14px;
+}
+.subscribe-input{
+   padding:8px 12px 8px 18px;
+   border-top-left-radius: 24px;
+   background: 0 0;
+   border-bottom-left-radius: 24px;
+   flex:1;
+   letter-spacing: 0.16px;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 1.7;
+   border:1.5px solid #949494 ;
+   height: 48px;
+   color:#222;
+   outline: 3px solid #0000;
+   width: 100%;
+   min-width: 0;
+   display: block;
+   border-right: 0;
+   transition: border .2s ease-out,background .2s ease-out;
+}
+.subscribe-button{
+   color:#222;
+   font: inherit;
+   cursor: pointer;
+   text-align: left;
+   height: 48px;
+   padding:12px 21px 12px 15px; 
+   border:1.5px solid #949494;
+   background: 0 0;
+   border-radius: 0 24px 24px 0;
+   outline: none;
+   font-size: 16px;
+   font-weight: 700;
+   position: relative;
+   min-height: 48px;
+   min-width: 80px;
+   vertical-align: middle;
+    border-left: 0;
+}
+.subscribe-button::before{
+    content:"";
+    border-radius: inherit;
+    z-index: -1;
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: 0;
+    transition: transform .2s cubic-bezier(.345,.115,.135,1.42),opacity .15s ease-out;
+}
+.subscribe-button::after{
+    opacity: 0;
+    background:#222;
+    transition: transform .2s cubic-bezier(.345,.115,.135,1.42), opacity .15s ease-out, border-radius .2s cubic-bezier(.345,.115,.135,1.42), box-shadow .2s ease-ou;
+    transform: scale(.7)perspective(1px);
+    content: "";
+    border-radius: inherit;
+    z-index: -1;
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.blank-line{
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.4;
+    font-size: 14px;
+    margin-top: 12px;
+}
+.footer-middle{
+     position: relative;
+}
+.footer-middle-container{
+    text-align: center;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    color:#fff;
+    background-color: #3b67d9;
+    letter-spacing: 0.16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+}
+.footer-middle-wrapper{
+    display: inline-block;
+    position: relative;
+}
+.footer-middle-button{
+    text-decoration: underline dashed;
+    background: 0 0;
+    border:0;
+    display: flex;
+    align-items: center;
+    text-decoration-color:#fff;
+    padding: 1px 0;
+}
+button.inner{
+    flex: auto; 
+}
+.button-icon{
+    fill:white;
+    height: 36px;
+    width: 36px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.button-word{
+    margin-left: 12px;
+    flex: auto;
+    letter-spacing: 0.16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #fff;
+}
+.footer-down{
+    display: flex;
+    flex-direction: row-reverse;
+    color:#fff;
+    max-width: 1400px;
+    margin: 0 auto;
+    line-height: 1.4;
+    font-size: 14px;
+}
+.footer-down-right{
+    padding: 36px;
+    padding-bottom: 24px;
+    flex: 2;
+    display: block;
+}
+.footer-down-right-wrapper{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.footer-down-right-grid{
+   display: flex;
+   flex-wrap: wrap;
+}
+.footer-down-right-column{
+    padding-right: 18px;
+    flex-grow: 1;
+    flex-basis: 25%;
+    max-width: 25%;
+    text-align: left;
+}
+.footer-down-right-column h3{
+    letter-spacing: 0.08px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    display: block;
+    padding-right: 6px;
+    text-align: left;
+}
+.footer-right-list-item{
+    max-height: none;
+    overflow: visible;
+}
+.footer-right-list-item ul{
+   text-align: left;
+   padding-right: 6px; 
+}
+.footer-right-list-item ul li{
+    width: 100%;
+    padding: 6px 0px;
+    display: block;
+}
+.footer-right-list-element{
+    transition: opacity .2s ease-out;
+    position: relative;
+    color:#fff;
+    font-size: 12.99px;
+}
+.footer-right-list-element-inner{
+    font-size: 12.99px;
+    color:#fff;
+    line-height: 1.4;
+}
+.icon-container1{
+    width: 100%;
+}
+.icon-wrapper1{
+    text-align: left;
+    margin-top: 12px;
+}
+.icon-wrapper1 ul{
+    padding-top: 18px;
+    text-align: left;
+}
+.icon-wrapper1 ul li{
+    margin-right: 12px;
+    display: inline-block;
+}
+.icon-item-link{
+    margin-left: -9px;
+    line-height: 1;
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 12.99px;
+    padding: 6px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    background: 0 0;
+    border: none;
+    border-radius: 24px;
+    display: inline-block;
+    position: relative;
+    font-weight: 500;
+}
+.icon-item-link::before{
+    opacity: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;border-radius: inherit;
+    transition: transform .2s cubic-bezier(.345,.115,.135,1.42), opacity .15s ease-out;
+}
+.icon-inner{
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 1;
+    font-size: 12.99px;
+    fill: #fff;
+}
+.footer-down-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:18px;
+    padding:18px 36px;
+    background: #122868;
+    flex: 1;
+    justify-content: center;
+}
+.etsy-large-icon-link{
+    border-radius: 12px;
+}
+.footer-left-icon{
+    border-radius: 12px;
+    background: #f1641e;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    fill: #fff;
+}
+.footer-left-icon svg{
+    height: 60px;
+    width: 60px;
+    fill:#fff;
+}
