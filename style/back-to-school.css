@@ -1,0 +1,159 @@
+.back-to-school-zone{
+    max-width: 1402px;
+    margin: 0 auto;
+}
+.back-to-school-outer{
+    margin-top: 48px;
+    margin-bottom: 18px;
+}
+.back-to-school-heading{
+    color:#222;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.back-to-school-word{
+    padding:6px;
+    margin-bottom: 6px;
+
+}
+.back-to-school-word h2{
+    letter-spacing: 0.46515px;
+    font-size: 31.01px;
+    font-weight: 300;
+    line-height: 1.1;
+    text-align: center;
+    font-family: Guardian-EgypTT,Charter,Charter Bitstream,Cambria,Noto Serif Light,Droid Serif,Georgia,"serif";
+}
+.filter1-outer{
+    padding-left: 18px;
+    padding-right: 36px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:#222;
+    font-size: 14px;
+    line-height: 1.4;
+}
+/* .filter-wrapper{
+
+} */
+ .filter1-inner{
+    padding-right: 6px;
+ }
+ .filter1-button{
+    min-height: 36px;
+    min-width: 36px;
+    padding: 9px 15px;
+    font-size: 12.99px;
+    line-height: 1.4;
+    color:#222;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 24px;
+    outline:none;
+    border:none;
+    font-weight: 500;
+    position: relative;
+    background: 0 0;
+ }
+ .filter1-button::before{
+    border:#0000 solid 1.5px;
+    opacity: 0;
+    content: "";
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+ }
+ .filter1-icon{
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    vertical-align: middle;
+ }
+ .filter1-icon svg{
+    display: block;
+ }
+ .filter1-word{
+    display: block;
+    margin-left: 3px;
+ }
+ .filter1-button::after{
+    background-color: #0000;
+    border:black solid 1.5px;
+    content: "";
+    border-radius: inherit;
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+ }
+ .card1-container{
+    padding-left: 18px;
+    padding-right:18px;
+    position: relative;
+ }
+ .card1-wrapper{
+    padding:6px 12px 12px 12px;
+    background-color: #fff;
+ }
+ .card1-inner{
+    margin: -9px;
+    display: flex;
+    flex-wrap: wrap;
+ }
+ .card1-item{
+    padding: 9px;
+    flex-grow: 1;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+ }
+ .card1-item-container{
+    position: relative;
+ }
+ .card1-item-link{
+    width: 100%;
+    display: inline-block;
+ }
+ .image1-container{
+    border-radius: 2px;
+    transition:box-shadow .2s ease-in-out ;
+    box-shadow:0 0 2px #0003 ;
+    position: relative;
+ }
+ .image1-outer{
+    background-color: #faf9f5;
+    transition: opacity .25s ease-out;
+    position: relative;
+ }
+ .image1-outer::before{
+    padding: 0 0 100%;
+    content: "";
+    height: 0;
+    display: block;
+ }
+ .image1-inner{
+    border-radius: 2px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+ }
+ .image1{
+    padding: 0 0 100%;
+    
+ }

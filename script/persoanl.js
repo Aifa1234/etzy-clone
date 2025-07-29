@@ -3,7 +3,7 @@ fetch('../data/personal.json')
 .then((response)=>response.json())
 .then((element)=>{
    const card=document.querySelector(".personalized-card-wrapper");
-   element.forEach((item)=>{
+   element.forEach((item,index)=>{
     html3+=`<li>
                                <a href="#" class="personalized-card-link">
                                   <div class="card-image-outer">
@@ -53,6 +53,10 @@ fetch('../data/personal.json')
                                                     (${item.offer}% off)
                                              </span>
                                         </p>
+                                        ${index===8?`<span class="eligible">
+                                                <button class="eligible-button">Eligible orders get 20% off</button>
+                                             </span>`
+                                             :""}
                                      </div>
                                      <div class="three-pixel"></div>
                                    </div>
