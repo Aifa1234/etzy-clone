@@ -1,12 +1,28 @@
-html3=""
+
+let startIndex=24;
+const firstLoad=12;
+nextLoad=24
+let data=[];
+const seeMore=document.querySelector("#js-button")
+const container=document.querySelector(".card13-inner");
+
 fetch(`../data/data.json`)
 .then((resolve)=>resolve.json())
 .then((element)=>{
-    const container=document.querySelector(".card12-inner");
-    element.forEach((item,index) => {
+    data=element
+    renderList(firstLoad)
+    startIndex=firstLoad
+});
+function renderList(count){
+
+    let endIndex=startIndex+count
+    const itemShow=data.slice(startIndex,endIndex)
+    let html5="";
+
+    itemShow.forEach((item) => {
         const hidePrice=item.realPrice==item.price?`style="display:none"`:"";
-        if(index<12){
-        html3+=`
+        
+        html5+=`
         <li class="card1-item">
                                     <div class="card1-item-container">
                                         <a href="#" class="card1-item-link">
@@ -21,7 +37,7 @@ fetch(`../data/data.json`)
                                                         <span class="etsy-pick-word">
                                                              Etsy’s Pick
                                                         </span>
-                                                    </span>
+                                                     </span>
                                                 </div>
                                             </div>
                                             <div class="card1-content">
@@ -79,7 +95,10 @@ fetch(`../data/data.json`)
 
                                 </li>
         `
-        }
+        
     });
-  container.innerHTML=html3
-})
+  container.innerHTML+=html5
+  startIndex+=count
+}
+seeMore.addEventListener("click",()=>renderList(nextLoad))
+  

@@ -1,10 +1,11 @@
 html4=""
-fetch(`../data/back-to-school.json`)
+fetch(`../data/data.json`)
 .then((resolve)=>resolve.json())
 .then((element)=>{
     const container=document.querySelector(".card1-inner");
-    element.forEach((item) => {
+    element.forEach((item,index) => {
         const hidePrice=item.realPrice==item.price?`style="display:none"`:"";
+       if(index>=12 && index<=23){
         html4+=`
         <li class="card1-item">
                                     <div class="card1-item-container">
@@ -77,7 +78,7 @@ fetch(`../data/back-to-school.json`)
                                     </div>
 
                                 </li>
-        `
+        `}
         
     });
   container.innerHTML=html4

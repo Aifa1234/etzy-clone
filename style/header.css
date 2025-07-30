@@ -1,8 +1,3 @@
-*{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
-}
 /* .desktop-header-wrapper{
 
 } */
@@ -24,6 +19,8 @@
 }
 .etsy-logo{
     padding-right: 6px;
+    transform: translateX(-3px) translateY(1px);
+
 }
 .hidden{
     clip:rect(0 0 0 0);
@@ -130,6 +127,8 @@
     border-radius: 99999px;
     background: rgba(#222,0,05);
     position: relative;
+    border-radius: 999999px;
+    
 }
 .search-bar-input{
     border-width: 2px;
@@ -137,6 +136,8 @@
     padding-left: 18px;
     border-top-left-radius: 24px;
     border-bottom-left-radius: 24px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     background: 0 0;
     flex: 1;
     padding-right: 42px;
@@ -149,26 +150,29 @@
     font-size: 16px;
     line-height: 1.7;
     display: block;
+    border-right: 0;
+    color:#222;
     /* transition:border .2s ease-out, background .2s ease-out; */
 }
 .button-search-icon{
     color: #fff;
 
-    border-width: 2px;
-    border-color: #222;
+    /* border-width: 2px; */
+    /* border-color: #222; */
     text-align: left;
     cursor: pointer;
     padding:12px 8px 12px 15px;
     height: 48px;
-    border:1.5px solid;
+   
     background: 0 0;
     border-left: 0;
-    border:1.5px solid;
+    border:2px solid #222;
     border-radius: 0 24px 24px 0;
     outline:none;
     font-size: 16px;
     font-weight: 700;
     position: relative;
+    border-left:0 ;
 }
 .button-search-icon::before{
     content:"";
@@ -183,13 +187,17 @@
     bottom:3px;
     right: 3px;
     position: relative;
-     
+    fill:#fff;
     height: 24px;
     width: 24px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
     vertical-align: middle;
     display: inline-block;
+    z-index: 5;
 }
-.search-icon-inner::after{
+.button-search-icon::after{
     opacity: 1;
     border-radius: 9999px;
     width:48px;
@@ -206,13 +214,13 @@
 .search-icon-inner svg{
     display: block;  
 }
-.icon-container{
+.icon-container2{
     flex-shrink: 0; 
 }
-.icon-inner{
+.icon-inner2{
     display: block;
 }
-.icon-list{
+.icon-list2{
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -224,7 +232,17 @@
     padding: 9px 15px;
     font-size: 12.99px;
     line-height: 1.4;
-    margin-right: 6px;  
+    margin-right: 6px;
+    color:#222;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    outline: none;
+    border: none;  
+    background: 0 0;
 }
 .sign-in-button::before{
     border:#0000 solid 0px;
@@ -248,17 +266,59 @@
     top:0;
     left: 0;
 }
-.flag-item-icon{
+.flag-icon-item2{
     display: inline-block;
     position: relative;
 }
-.flag-inner{
+.flag-inner2{
     padding: 12px;
     line-height: 1;
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    border-radius: 24px;
+    outline: none;
+    background: 0 0;
+    text-align: center;
+    min-height: 48px;
+    min-width: 48px;
+    vertical-align: middle;
+    background: 0 0;
+    cursor: pointer;
+}
+.flag-inner-inner2{
+    vertical-align: middle;
+    top:2px;
+    position: relative;
+    display: inline-block;
+}
+.flag-wrapper2{
+    display: block;
+    position: relative;
+}
+.flag-wrapper2::after{
+    position: absolute;
+    content: "";
+    border-radius: 99999px;
+    height: 20px;
+    width: 20px;
+    top:0;
+    left:0;
+    box-shadow: 0 0 0  2px #222, 0 0 0  1px #fff inset;
+    bottom: 2.4px;color:#000
 }
 /* .flag-inner::after{
 
 } */
+.favorite-wrapper{
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    color:#000
+}
  .header-down{
     display: block;  
  }
