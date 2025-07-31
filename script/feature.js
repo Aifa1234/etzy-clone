@@ -21,7 +21,7 @@ const feature=[{
     image3:"../image/feature/three-three.jpg",
     image4:"../image/feature/three-four.jpg",
     icon:"../image/icon/gamma.jpg",
-    name:"Flossandfable",
+    name:"ThatMomWithALaser",
     count:"908"
 },
 {
@@ -39,12 +39,14 @@ feature.forEach((element)=>{
     html1+=`
     <div class="feature-shop-one">
                                 <div class="feature-shop-one-wrapper">
+                                <div class="feature-shop-wrapper-wrapper">
+
                                     <div class="feature-shop-upper">
                                         <a href="#" class="fearure-shop-one-link">
                                             <div class="feature-shop-one-inner">
                                                 <div class="place-holder-content">
                                                     <div class="place-holder">
-                                                        <div class="place-holder-inner">
+                                                        <div class="place-holder-inner ">
                                                             <img src="${element.image1}" alt="no-image">
                                                         </div>
 
@@ -57,7 +59,7 @@ feature.forEach((element)=>{
                                             <div class="feature-shop-one-inner">
                                                 <div class="place-holder-content">
                                                     <div class="place-holder">
-                                                        <div class="place-holder-inner">
+                                                        <div class="place-holder-inner one-change">
                                                             <img src="${element.image2}" alt="no-image">
                                                         </div>
                                                     </div>
@@ -83,7 +85,7 @@ feature.forEach((element)=>{
                                             <div class="feature-shop-one-inner">
                                                 <div class="place-holder-content">
                                                     <div class="place-holder">
-                                                        <div class="place-holder-inner">
+                                                        <div class="place-holder-inner one-change">
                                                             <img src="${element.image4}" alt="no-image">
                                                         </div>
                                                     </div>
@@ -132,6 +134,7 @@ feature.forEach((element)=>{
                                             </a>
                                         </div>
                                     </div>
+                                 </div>
                                 </div>
                             </div>`
 })

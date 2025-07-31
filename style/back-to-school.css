@@ -69,11 +69,12 @@
     transition: transform .2s cubic-bezier(.345,.115,.135,1.42),opacity .15s ease-out;
     border-radius: inherit;
     z-index: -1;
-    width: calc(100% - 1.6px);
-    height: calc(100% - 1.6px);
+    width:100%;
+    height:100%;
     position: absolute;
    top:0;
     left: 0; 
+    box-sizing: border-box;
  }
  .filter1-button::after{
     background-color: #0000;
@@ -85,8 +86,9 @@
     left: 0;
     bottom: 0;
     right: 0;
-     width: calc(100% - 1.6px);
-    height: calc(100% - 1.6px);
+     width: 100% ;
+    height: 100% ;
+    box-sizing: border-box;
  }
  .filter1-icon{
     height: 18px;
@@ -412,4 +414,28 @@
    position: absolute;
    top:0;
    left: 0;
+}
+.eligible-container{
+   width: 100%;
+   display: inline;
+   position: relative;
+   letter-spacing: 0.08px;
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 1.25;
+   white-space: normal;
+   height: 20.775px;
+}
+.eligible-button{
+   text-decoration: underline;
+   border: 0;
+   background: 0 0;
+   width: 100%;
+   display: inline-flex;
+   color:#595959;
+   letter-spacing: 0.1299px;
+   font-size: 12.99px;
+   font-weight: 400;
+   line-height: 1.4;
+   padding: 1px 0;
 }

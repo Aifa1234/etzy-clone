@@ -22,7 +22,7 @@ function renderList(count){
     const itemShow=filterData.slice(startIndex,endIndex)
     let html6="";
 
-    itemShow.forEach((item) => {
+    itemShow.forEach((item,index) => {
         const hidePrice=item.realPrice==item.price?`style="display:none"`:"";
         
         html6+=`
@@ -61,7 +61,7 @@ function renderList(count){
                                                         <span class="dot1">·</span>
                                                          <div class="letter-container">
                                                             <div class="letter-wrapper">
-                                                                <span class="letter-icon">
+                                                                <span class="letter-icon" ${(index===1||index===6||index===7||index===8||index===11)?`style="display:none"`:""}>
                                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m20.902 7.09-2.317-1.332-1.341-2.303H14.56L12.122 2 9.805 3.333H7.122L5.78 5.758 3.341 7.09v2.667L2 12.06l1.341 2.303v2.666l2.318 1.334L7 20.667h2.683L12 22l2.317-1.333H17l1.342-2.303 2.317-1.334v-2.666L22 12.06l-1.341-2.303V7.09zm-6.097 6.062.732 3.515-.488.363-2.927-1.818-3.049 1.697-.488-.363.732-3.516-2.56-2.181.121-.485 3.537-.243 1.341-3.273h.488l1.341 3.273 3.537.243.122.484z"></path></svg>
                                                                 </span>
                                                                 <p class="letter-word">

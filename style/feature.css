@@ -35,23 +35,39 @@
     flex-basis: 25%;
     max-width: 25%;
     padding: 9px;
+    line-height: 1.4;
+    font-size: 14px;
+    /* height: 296.825px; */
 }
 .feature-shop-one-wrapper{
-    text-align: left;
-    width: 100%;
-    cursor: pointer;
-    z-index: 10;
-    background: 0 0;
-    border: none;
-    outline: none;
-    max-width: 100%;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
+   width: 100%;
+   text-align: left;
+   cursor: pointer;
+   background: 0 0;
+   border:none;
+   outline: none;
+   max-width: 100%;
+   text-decoration: none;
+   display: inline-block;
+   position: relative;
+   border-radius: 12px;
+
+}
+.feature-shop-one-wrapper::before{
+    content: "";
+    opacity: 0;
+    inset:3px;
+    position: absolute;
+    border-radius: 12px;
+    box-sizing: border-box;
+    transition: opacity .15s ease-out,transform .2s ease-in;
+}
+.feature-shop-wrapper-wrapper{
     border-radius: 12px;
     background: #fff;
     overflow: hidden;
-    border:1px solid #0e0e0e2e;
+    height: 100%;
+    border: 1px solid #0e0e0e2e;
 }
 .feature-shop-upper{
     position: relative;
@@ -59,7 +75,6 @@
     padding: 12px 12px 0 12px;
     display: flex;
     margin-bottom: 3px;
-    /* gap:2px; */
 }
 .fearure-shop-one-link{
     width: 100%;
@@ -68,10 +83,10 @@
     transition: all .15s ease-in-out;
     margin-right: 1.5px;
     background: 0 0;
-    
+    border-radius: 2px;
 }
 .feature-shop-one-inner{
-    
+    border-radius: 2px;
     position: relative;
     background-color: #faf9f5;
     transition: opacity .25s ease-out;  
@@ -88,7 +103,6 @@
     right: 0; */
 }
 .place-holder-content{
-
     position: absolute;
     top:0;
     bottom: 0;
@@ -97,6 +111,7 @@
     transition: opacity .25s ease-out;
 }
 .place-holder{
+   
     /* overflow: hidden; */
     border-radius: 2px;
     background-color: #faf9f5;
@@ -104,12 +119,16 @@
     position: relative;
 }
 /* .place-holder-inner{
-    border-radius: 2px;
+    padding: 0 0 79.412%;
 } */
 .place-holder-inner img{
     width: 100%;
     display: block;
-    height: 100%;
+     /* height: 100%; */
+    border-radius: 10px; 
+}
+.one-change{
+   transform: translateX(1.3px); 
 }
 .feature-shop-lower{
     position: relative;
@@ -182,6 +201,8 @@
     line-height: 1.4;
     left:2px;
     top:1px;
+    display: inline-block;
+    margin-left: -0.5px;
     position: relative;
     /* right:-2px;
     bottom:-1px */
@@ -200,6 +221,7 @@
    border-radius: 24px;
    outline: none;
    background-color: #fff;
+   
 }
 .favorite-button-link::before,
 .favorite-button-link::after{

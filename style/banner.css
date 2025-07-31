@@ -1,4 +1,6 @@
-
+main{
+   max-width: 1400px;
+}
 .banner-outer{
   background-color: #FFFBD8;
   width: 100%;  

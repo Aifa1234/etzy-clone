@@ -253,7 +253,7 @@ button.inner{
 }
 .icon-wrapper1{
     text-align: left;
-    margin-top: 12px;
+   
 }
 .icon-wrapper1 ul{
     padding-top: 18px;
@@ -297,8 +297,10 @@ button.inner{
     display: inline-block;
     line-height: 1;
     font-size: 12.99px;
-    fill: #fff;
+   color:white;
+   fill: white;
 }
+
 .footer-down-left{
     display: flex;
     flex-direction: column;
