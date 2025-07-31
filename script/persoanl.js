@@ -1,12 +1,31 @@
-html3=""
+(function(){
+let startIndex=0;
+const firstLoad=12;
+nextLoad=12
+let data=[];
+let filterData=[]
+
+const seeMore=document.querySelector("#js-button-one")
+const container1=document.querySelector(".card12-inner");
+
 fetch(`../data/data.json`)
 .then((resolve)=>resolve.json())
 .then((element)=>{
-    const container=document.querySelector(".card12-inner");
-    element.forEach((item,index) => {
+    data=element
+    filterData=data
+    renderList(firstLoad)
+    
+});
+function renderList(count){
+
+    let endIndex=startIndex+count
+    const itemShow=filterData.slice(startIndex,endIndex)
+    let html6="";
+
+    itemShow.forEach((item) => {
         const hidePrice=item.realPrice==item.price?`style="display:none"`:"";
-        if(index<12){
-        html3+=`
+        
+        html6+=`
         <li class="card1-item">
                                     <div class="card1-item-container">
                                         <a href="#" class="card1-item-link">
@@ -21,7 +40,7 @@ fetch(`../data/data.json`)
                                                         <span class="etsy-pick-word">
                                                              Etsy’s Pick
                                                         </span>
-                                                    </span>
+                                                     </span>
                                                 </div>
                                             </div>
                                             <div class="card1-content">
@@ -79,7 +98,98 @@ fetch(`../data/data.json`)
 
                                 </li>
         `
-        }
+        
     });
-  container.innerHTML=html3
+  container1.innerHTML+=html6
+  startIndex+=count
+}
+seeMore.addEventListener("click",()=>{
+    renderList(nextLoad)
+});
+ 
+
+
+
+
+
+
+
+const radioButton=document.querySelectorAll(`input[name="price-filter"]`)
+radioButton.forEach((radio)=>{
+    radio.addEventListener("change",priceFilter)
 })
+document.getElementById("lowPrice").addEventListener("input",()=>{
+    document.querySelector(`input[value="custom"]`).checked=true
+    priceFilter();
+})
+document.getElementById("highPrice").addEventListener("input",()=>{
+    document.querySelector(`input[value="custom"]`).checked=true
+    priceFilter();
+})
+
+// const container=document.querySelector(".card12-inner")
+// const container1=document.querySelector(".")
+
+
+function priceFilter(){
+   const selectedRadio=document.querySelector(`input[name="price-filter"]:checked`)
+   const selected= selectedRadio ? selectedRadio.value:"";
+   const low=parseInt(document.getElementById("lowPrice").value) ||0
+   const high=parseInt(document.getElementById("highPrice").value)||Infinity
+    
+    let min=0,max=Infinity;
+
+    switch(selected){
+        case "under-500":
+            min=0;
+            max=499
+            break;
+        case "500-1000":
+            min=500
+            max=1000
+            break
+        case "1000-1500":
+            min=1000
+            max=1500
+            break
+        case "over-1500":
+            min=1501
+            break
+        case "custom":
+            min=low
+            max=high
+            break
+    }
+    filterData=data.filter((item)=>{
+         const price=parseInt(item.price.replace(/,/g,""))
+        return price>=min && price<=max
+    })
+  container1.innerHTML=""
+  startIndex=0
+  renderList(firstLoad)
+};
+
+
+
+const typeItem=document.querySelectorAll(`input[name="type-item"]`)
+typeItem.forEach((type)=>{
+    type.addEventListener("change",(event)=>{
+        const selectType=event.target.value
+        typeFilter(selectType)
+    })
+})
+
+function typeFilter(selectType){
+    startIndex=0
+    nextLoad=12
+
+    if(selectType==="all-type"){
+        filterData=data
+    }
+    else{
+        filterData=data.filter(item=>item.type===selectType)
+    }
+    container1.innerHTML=''
+    renderList(firstLoad)
+}
+})()
