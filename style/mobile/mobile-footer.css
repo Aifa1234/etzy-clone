@@ -1,0 +1,8 @@
+@media(max-width:1000px){
+    .footer-up-outer{
+        padding-top: 18px;
+    }
+    .footer-up-header-wrapper{
+        margin-bottom: 12p;
+    }
+}

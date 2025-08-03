@@ -1,0 +1,24 @@
+@media(max-width:1000px){
+    .feature-shop-banner-wrapper h2{
+        font-size: 24px;
+        letter-spacing: 0.12px;
+        font-weight: 500;
+        line-height: 1.35;
+    }
+    .feature-shop-banner-outer{
+        display: block;
+    }
+    .feature-shop-one{
+       padding: 6px;
+       flex-grow: 1;
+       flex-basis: 100%;
+       max-width: 100%;
+    }
+    .feature-shop-banner-wrapper{
+        margin: 36px 12px 6px 12px;
+    }
+    .feature-shop-banner-inner-inner{
+        margin: -6px;
+    }
+    
+}

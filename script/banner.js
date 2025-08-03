@@ -46,7 +46,7 @@ banner.forEach((element)=>{
                         <div class="product-item">
                             <a href="#" class="product-item-link">
                                 <img src="${element.image}" alt="">
-                                   ${element.title}
+                                   <p>${element.title}</p>
                             </a>
 
                         </div>

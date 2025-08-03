@@ -16,11 +16,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
 }
 .etsy-logo{
     padding-right: 6px;
     transform: translateX(-3px) translateY(1px);
-
 }
 .hidden{
     clip:rect(0 0 0 0);

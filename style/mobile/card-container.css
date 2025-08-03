@@ -1,0 +1,36 @@
+@media(max-width:1000px){
+    .back-to-school-word h2{
+        letter-spacing: 0.48px;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.15;
+    }
+   .card1-item{
+       flex-grow: 1;
+       flex-basis: 50%;
+       max-width: 50%;
+   }
+   .back-to-school-outer{
+    margin-top: 36px;
+    margin-bottom: 6px;
+   }
+   .filter1-word{
+    display: none;
+   }
+   .card1-container{
+    padding: 0 6px;
+   }
+   .card12-inner,
+   .card1-inner,
+   .card13-inner{
+     margin: -6px;
+   }
+   .card1-item{
+     padding:3px ;
+   }
+   .etsy-pick-container{
+    bottom: 6px;
+    left: 6px;
+    top: unset;
+   }
+}

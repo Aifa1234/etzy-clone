@@ -1,0 +1,61 @@
+
+@media(max-width:1000px){
+   .desktop-header{
+    padding: 0;
+    position: static;
+    flex-wrap: wrap;
+    text-align: left;
+    max-width: 1400px;
+    border-bottom: 1px solid #0e0e0e2e;
+    padding: 0 12px;
+    max-width: 500px;
+    flex-wrap: wrap;
+    line-height: 1.4;
+    font-size: 14px;
+
+   } 
+   .etsy-logo{
+      padding: 0;
+   }
+    .logo-outer{
+     width: 60px;
+     height: 30px;
+     /* right: 3px;
+     top: 1px; */
+     position: relative;
+     display: inline-block;
+     transform: translateX(2px) translateY(1px);
+   }
+   .search-bar{
+      order:2;
+      width: 100%;
+      padding: 0;
+   }
+   .hamburger{
+      margin-left: -12px;
+      margin-bottom: 12px;
+      padding: 12px;
+      line-height: 1;
+      border: none;
+      background: 0 0;
+   }
+   .category-bar{
+    display: none;
+   }
+   .header-down{
+    display: none;
+   }
+   .hamburger-icon{
+      fill: black;
+      height: 24px;
+      width: 24px;
+      vertical-align: middle;
+      display: inline-block;
+   }
+   .icon-list2 li:nth-child(3) .flag-inner2,
+   .icon-list2 li:nth-child(4) .flag-inner2
+   {
+      margin: 0 -2px;
+   }
+   
+}
