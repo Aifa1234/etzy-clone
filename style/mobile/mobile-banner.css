@@ -74,3 +74,6 @@
     vertical-align: middle;
   }
 }
+.product-item-link p{
+  display:inline
+}

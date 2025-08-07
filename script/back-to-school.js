@@ -1,25 +1,25 @@
 (function(){
 let startIndex=12;
 const firstLoad=12;
-nextLoad=12
-let data=[];
-let filterData=[]
+let nextLoad=12
+let data2=[];
+let filterData2=[]
 
-const seeMore=document.querySelector("#js-button-one")
-const container1=document.querySelector(".card1-inner");
+const seeMore=document.querySelector("#js-button-two")
+const container2=document.querySelector(".card1-inner");
 
 fetch(`../data/data.json`)
 .then((resolve)=>resolve.json())
 .then((element)=>{
-    data=element
-    filterData=data
+    data2=element
+    filterData2=data2
     renderList(firstLoad)
     
 });
 function renderList(count){
 
     let endIndex=startIndex+count
-    const itemShow=filterData.slice(startIndex,endIndex)
+    const itemShow=filterData2.slice(startIndex,endIndex)
     let html6="";
 
     itemShow.forEach((item,index) => {
@@ -100,16 +100,13 @@ function renderList(count){
         `
         
     });
-  container1.innerHTML+=html6
+  container2.innerHTML+=html6
   startIndex+=count
 }
 seeMore.addEventListener("click",()=>{
     renderList(nextLoad)
 });
  
-
-
-
 
 
 
@@ -160,11 +157,11 @@ function priceFilter(){
             max=high
             break
     }
-    filterData=data.filter((item)=>{
+    filterData2=data2.filter((item)=>{
          const price=parseInt(item.price.replace(/,/g,""))
         return price>=min && price<=max
     })
-  container1.innerHTML=""
+  container2.innerHTML=""
   startIndex=0
   renderList(firstLoad)
 };
@@ -184,12 +181,12 @@ function typeFilter(selectType){
     nextLoad=12
 
     if(selectType==="all-type"){
-        filterData=data
+        filterData22=data
     }
     else{
-        filterData=data.filter(item=>item.type===selectType)
+        filterData2=data2.filter(item=>item.type===selectType)
     }
-    container1.innerHTML=''
+    container2.innerHTML=''
     renderList(firstLoad)
 }
 })()

@@ -1,12 +1,12 @@
 (function(){
 let startIndex=24;
 const firstLoad=12;
-nextLoad=12
+let nextLoad=12
 let data=[];
 let filterData=[]
 
-const seeMore=document.querySelector("#js-button-one")
-const container1=document.querySelector(".card13-inner");
+const seeMore=document.querySelector("#js-button-three")
+const container3=document.querySelector(".card13-inner");
 
 fetch(`../data/data.json`)
 .then((resolve)=>resolve.json())
@@ -100,7 +100,7 @@ function renderList(count){
         `
         
     });
-  container1.innerHTML+=html6
+  container3.innerHTML+=html6
   startIndex+=count
 }
 seeMore.addEventListener("click",()=>{
@@ -164,7 +164,7 @@ function priceFilter(){
          const price=parseInt(item.price.replace(/,/g,""))
         return price>=min && price<=max
     })
-  container1.innerHTML=""
+  container3.innerHTML=""
   startIndex=0
   renderList(firstLoad)
 };
@@ -189,7 +189,7 @@ function typeFilter(selectType){
     else{
         filterData=data.filter(item=>item.type===selectType)
     }
-    container1.innerHTML=''
+    container3.innerHTML=''
     renderList(firstLoad)
 }
 })()

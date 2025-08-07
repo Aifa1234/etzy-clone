@@ -138,14 +138,28 @@
         padding-bottom: 18px;
     }
     .footer-bottom-left{
-        flex-direction: column;
+        display: block;
     }
     .copy-right{
       margin: 0 0 12px 0;  
       display: inline-block;
     }
+    .footer-bottom-left ul{
+        display: inline-block;
+        padding-left: 0;
+        list-style: none;
+    }
     .footer-bottom-left ul li{
         margin-right: 12px;
         font-size: 12.99px;
     }
+    .footer-bottom-inner{
+        padding: 0;
+    }
+}
+.footer-down-right-column button{
+    display: none;
+}
+.hamburger{
+    display: none;
 }

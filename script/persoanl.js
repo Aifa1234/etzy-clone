@@ -1,9 +1,9 @@
 (function(){
 let startIndex=0;
 const firstLoad=12;
-nextLoad=12
-let data=[];
-let filterData=[]
+let nextLoad=12
+let data1=[];
+let filterData1=[]
 
 const seeMore=document.querySelector("#js-button-one")
 const container1=document.querySelector(".card12-inner");
@@ -11,15 +11,15 @@ const container1=document.querySelector(".card12-inner");
 fetch(`../data/data.json`)
 .then((resolve)=>resolve.json())
 .then((element)=>{
-    data=element
-    filterData=data
+    data1=element
+    filterData1=data1
     renderList(firstLoad)
     
 });
 function renderList(count){
 
     let endIndex=startIndex+count
-    const itemShow=filterData.slice(startIndex,endIndex)
+    const itemShow=filterData1.slice(startIndex,endIndex)
     let html6="";
 
     itemShow.forEach((item,index) => {
@@ -163,7 +163,7 @@ function priceFilter(){
             max=high
             break
     }
-    filterData=data.filter((item)=>{
+    filterData1=data1.filter((item)=>{
          const price=parseInt(item.price.replace(/,/g,""))
         return price>=min && price<=max
     })
@@ -187,10 +187,10 @@ function typeFilter(selectType){
     nextLoad=12
 
     if(selectType==="all-type"){
-        filterData=data
+        filterData1=data1
     }
     else{
-        filterData=data.filter(item=>item.type===selectType)
+        filterData1=data1.filter(item=>item.type===selectType)
     }
     container1.innerHTML=''
     renderList(firstLoad)
